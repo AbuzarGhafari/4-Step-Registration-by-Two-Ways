@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  background: #ffffff;
+  padding: 1rem 0rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.01);
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.subheading {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #4d4d4d;
+}
+
+.gray {
+  color: #4d4d4d;
+  width: 80px;
+  display: inline-block;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  all: unset;
+  border: none;
+  outline: none;
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #9a9a9a;
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.01);
+  border-radius: 0.25rem;
+  color: #4d4d4d;
+  transition: all 0.3se ease;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #ffffff;
+  background: #4d4d4d;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn.primary {
+  background: #018ce9;
+  border: 1px solid #016db6;
+  color: #ffffff;
+}
+
+.flex, #inputError {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#modalContainer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(77, 77, 77, 0.75);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+#modalContainer.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+#modalContainer .modalContent form {
+  margin-top: 3rem;
+  max-width: 760px;
+  width: 760px;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#modalContainer .modalContent form .modalHeader {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+#modalContainer .modalContent form .modalHeader button {
+  border: none;
+  outline: none;
+  background: #ffffff;
+  font-size: 1.2rem;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+#modalContainer .modalContent form .modalBody {
+  min-height: 600px;
+  position: relative;
+}
+#modalContainer .modalContent form .modalBody .modalItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+#modalContainer .modalContent form .modalBody .modalItem.show {
+  opacity: 1;
+  visibility: visible;
+}
+#modalContainer .modalContent form .modalFooter {
+  padding: 1rem;
+  border-top: 1px solid #dfdfdf;
+  text-align: right;
+}
+
+.inputRow {
+  margin-bottom: 1rem;
+}
+.inputRow label {
+  display: block;
+  color: #4d4d4d;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.inputRow input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  font-size: 1.1rem;
+  border: 1px solid #dfdfdf;
+}
+
+.alert, #inputError {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 1s ease;
+}
+.alert.error, #inputError {
+  background: #ffb4b7;
+  border: 2px solid #95080f;
+  box-shadow: 0px 1rem 1rem rgba(149, 8, 15, 0.2);
+}
+.alert.success, .success#inputError {
+  background: #d0ffb4;
+  border: 2px solid #089520;
+  box-shadow: 0px 1rem 1rem rgba(8, 149, 20, 0.2);
+}
+
+#inputError {
+  position: absolute;
+  top: -30rem;
+  left: 50%;
+  width: 760px;
+  transform: translateX(-50%);
+}
+#inputError.show {
+  transform: translateX(-50%) translateY(32rem);
+}
+#inputError button {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
